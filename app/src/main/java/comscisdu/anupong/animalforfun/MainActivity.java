@@ -3,6 +3,7 @@ package comscisdu.anupong.animalforfun;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,5 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
-}
+    }//end method onCreate
+
+    public void  clickFB(View view) {
+        Intent fbIntent = new Intent(Intent.ACTION_VIEW);
+        fbIntent.setData(Uri.parse("https://www.facebook.com/anupong.wingnak/"));
+        startActivity(fbIntent);
+    }//end method clickFB
+}//end class
